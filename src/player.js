@@ -19,9 +19,12 @@ class Player {
     } 
   }
 
-  shoot(input) {
+  shoot(input, lasers) {
     if(input.isDown(32)) {
       console.log("SHOOTING");
+      let x = Math.floor(this.x + (this.scl / 2) / 2);
+      let y = Math.floor(this.y - this.scl);
+      new Laser(x, y, lasers)
     }
   }
 
