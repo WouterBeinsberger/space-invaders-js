@@ -16,7 +16,11 @@ class Player {
       this.x += this.stepSize;
     } else if (input.isDown(65)) {
       this.x -= this.stepSize;
-    } else if (input.isDown(32)) {
+    } 
+  }
+
+  shoot(input) {
+    if(input.isDown(32)) {
       console.log("SHOOTING");
     }
   }
@@ -26,5 +30,4 @@ class Player {
     ctx.fillStyle = "rgb(200 0 0)";
     ctx.fillRect(this.x, this.y, this.scl, this.scl);
   }
-
 }

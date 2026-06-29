@@ -19,6 +19,7 @@ function gameLoop() {
 
 function update() {
   player.move(input);
+  player.shoot(input);
 }
 
 function draw() {
