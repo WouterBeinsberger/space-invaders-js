@@ -12,9 +12,9 @@ class Player {
   }
 
   move(input) {
-    if (input.isKeyDown(68)) {
+    if (input.isKeyDown(68) && this.x < window.canvas.width - this.scl) {
       this.x += this.stepSize;
-    } else if (input.isKeyDown(65)) {
+    } else if (input.isKeyDown(65) && this.x > 0) {
       this.x -= this.stepSize;
     } 
   }
