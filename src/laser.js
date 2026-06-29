@@ -5,12 +5,12 @@ class Laser {
     this.scl = 20;
     this.stepSize = 1;
     this.lasers = lasers;
-    lasers.add(this);
+    this.lasers.add(this);
   }
 
   move() {
-    if (this.y > window.canvas.height) {
-      this.lasers.delete(this);
+    if (this.y === 0) {
+      this.lasers.remove(this);
     } else {
       this.y -= this.stepSize;
     }

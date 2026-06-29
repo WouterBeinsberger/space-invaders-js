@@ -12,17 +12,16 @@ class Player {
   }
 
   move(input) {
-    if (input.isDown(68)) {
+    if (input.isKeyDown(68)) {
       this.x += this.stepSize;
-    } else if (input.isDown(65)) {
+    } else if (input.isKeyDown(65)) {
       this.x -= this.stepSize;
     } 
   }
 
   shoot(input, lasers) {
-    if(input.isDown(32)) {
-      console.log("SHOOTING");
-      let x = Math.floor(this.x + (this.scl / 2) / 2);
+    if(input.isKeyPressed(32)) {
+      let x = Math.floor(this.x + this.scl / 4);
       let y = Math.floor(this.y - this.scl);
       new Laser(x, y, lasers)
     }

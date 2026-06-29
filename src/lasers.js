@@ -3,16 +3,15 @@ class Lasers {
 
   add(laser) {
     this.laserList.add(laser);
-    console.log("LASERS: " + this.laserList);
+    console.log("ADDED: " + laser);
   }
 
   remove(laser) {
     this.laserList.delete(laser);
-    console.log("LASERS: " + this.laserList);
+    console.log("DELETED: " + laser);
   }
 
   move() {
-    //move up
     for (const laser of this.laserList) {
       laser.move();
     }
