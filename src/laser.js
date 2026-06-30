@@ -16,6 +16,16 @@ class Laser {
     }
   }
 
+  checkHit(alien) {
+    if (this.x < alien.x + alien.scl &&
+        this.x + this.scl > alien.x &&
+        this.y < alien.y + alien.scl &&
+        this.y + this.scl > alien.y) {
+          console.log("ALIEN HIT");
+          this.lasers.remove(this);
+    }
+  }
+
   draw() {
     let ctx = window.canvas.getContext("2d");
     ctx.fillStyle = "rgb(21, 126, 187)";

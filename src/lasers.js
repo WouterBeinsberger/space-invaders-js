@@ -23,7 +23,9 @@ class Lasers {
     }
   }
 
-  checkHit() {
-    //check hit alien
+  checkHit(alien) {
+    for (const laser of this.laserList) {
+      laser.checkHit(alien);
+    }
   }
 }

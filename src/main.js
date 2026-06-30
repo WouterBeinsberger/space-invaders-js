@@ -26,6 +26,7 @@ function update() {
   player.shoot(input, lasers);
   lasers.move();
   alien.move();
+  alien.checkHit(lasers);
 }
 
 function draw() {

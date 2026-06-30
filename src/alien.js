@@ -13,6 +13,10 @@ class Alien {
     }
     this.x += this.stepSize;
   }
+  
+  checkHit(lasers) {
+    lasers.checkHit(this);
+  }
 
   draw() {
     let ctx = window.canvas.getContext("2d");
