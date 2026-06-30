@@ -4,7 +4,7 @@ class Player {
     this.x = Math.floor(window.canvas.width / 2);
     this.y = Math.floor(window.canvas.height - this.scl);
     this.stepSize = 1;
-    this.alive = false;
+    this.alive = true;
   }
 
   isAlive() {
