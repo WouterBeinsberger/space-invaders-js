@@ -1,17 +1,13 @@
 class Alien {
-  constructor() {
-    this.x = 0;
-    this.y = 0;
-    this.scl = 20;
-    this.stepSize = 1;
+  constructor(x, y, scl) {
+    this.x = x;
+    this.y = y;
+    this.scl = scl;
     this.alive = true;
   }
 
   move() {
-    if (this.x > window.canvas.width - this.scl || this.x < 0) {
-      this.stepSize = -this.stepSize;
-    }
-    this.x += this.stepSize;
+
   }
   
   checkHit(lasers) {

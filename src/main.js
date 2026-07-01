@@ -8,7 +8,9 @@ function main() {
   player = new Player();
   input = new Input();
   lasers = new Lasers();
-  alien = new Alien();
+  // alien = new Alien();
+  aliens = new Aliens(3, 2, 20);
+  aliens.generate();
 
   window.canvas = document.getElementById("canvas");
   gameLoop();
@@ -25,8 +27,10 @@ function update() {
   player.move(input);
   player.shoot(input, lasers);
   lasers.move();
-  alien.move();
-  alien.checkHit(lasers);
+  // alien.move();
+  // alien.checkHit(lasers);
+  aliens.move();
+  aliens.checkHit(lasers);
 }
 
 function draw() {
@@ -35,7 +39,8 @@ function draw() {
 
   player.draw();
   lasers.draw();
-  alien.draw();
+  // alien.draw();
+  aliens.draw();
 }
 
 main();
